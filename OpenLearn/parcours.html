@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcours - OpenLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">OpenLearn</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="#parcours" class="nav-link actif">Parcours</a></li>
+                <li><a href="formations.html" class="nav-link">Formations</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-profil">
+                <button class="btn-connexion" onclick="afficherAuthentification()">Connexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page -->
+    <section class="page-header">
+        <div class="section-container">
+            <h1 class="titre-page">Des parcours structurés vers les métiers du numérique</h1>
+            <p class="description-page">
+                Chaque parcours est conçu pour vous guider du niveau débutant au niveau professionnel.
+            </p>
+        </div>
+    </section>
+
+    <!-- Parcours -->
+    <section id="parcours" class="parcours-section">
+        <div class="section-container">
+            <!-- Parcours 1 : Développement Web -->
+            <div class="parcours-carte parcours-web">
+                <div class="parcours-header">
+                    <div class="parcours-icone"></div>
+                    <h2>Développement Web</h2>
+                </div>
+                <p class="parcours-description">
+                    Apprenez à créer des sites et applications web modernes et performants.
+                </p>
+
+                <div class="parcours-details">
+                    <div class="detail-groupe">
+                        <h4>Compétences</h4>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript avancé</li>
+                            <li>Frameworks (React, Vue)</li>
+                            <li>Backend (Node.js, PHP)</li>
+                            <li>Bases de données SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-groupe">
+                        <h4>Débouchés</h4>
+                        <ul>
+                            <li>Développeur Frontend</li>
+                            <li>Développeur Backend</li>
+                            <li>Développeur Fullstack</li>
+                            <li>Ingénieur Web</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="parcours-meta">
+                    <span class="duree">⏱ 6-8 mois</span>
+                    <span class="niveau"> Tous niveaux</span>
+                </div>
+
+                <button class="btn btn-primaire" onclick="inscrisParcours('Développement Web')">
+                    S'inscrire maintenant
+                </button>
+            </div>
+
+            <!-- Parcours 2 : Développement Mobile -->
+            <div class="parcours-carte parcours-mobile">
+                <div class="parcours-header">
+                    <div class="parcours-icone"></div>
+                    <h2>Développement Mobile</h2>
+                </div>
+                <p class="parcours-description">
+                    Concevez des applications Android et iOS performantes et intuitives.
+                </p>
+
+                <div class="parcours-details">
+                    <div class="detail-groupe">
+                        <h4>Technologies</h4>
+                        <ul>
+                            <li>Flutter</li>
+                            <li>React Native</li>
+                            <li>Kotlin</li>
+                            <li>Swift</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-groupe">
+                        <h4>Opportunités</h4>
+                        <ul>
+                            <li>Développeur Mobile</li>
+                            <li>Ingénieur Applications</li>
+                            <li>Freelancer mobile</li>
+                            <li>Startup tech</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="parcours-meta">
+                    <span class="duree">⏱ 5-7 mois</span>
+                    <span class="niveau">Intermédiaire+</span>
+                </div>
+
+                <button class="btn btn-primaire" onclick="inscrisParcours('Développement Mobile')">
+                    S'inscrire maintenant
+                </button>
+            </div>
+
+            <!-- Parcours 3 : Data & IA -->
+            <div class="parcours-carte parcours-data">
+                <div class="parcours-header">
+                    <div class="parcours-icone"></div>
+                    <h2>Data & Intelligence Artificielle</h2>
+                </div>
+                <p class="parcours-description">
+                    Maîtrisez l'analyse de données et explorez les fondamentaux de l'IA.
+                </p>
+
+                <div class="parcours-details">
+                    <div class="detail-groupe">
+                        <h4>Compétences</h4>
+                        <ul>
+                            <li>Python avancé</li>
+                            <li>Data Analysis (Pandas, NumPy)</li>
+                            <li>Machine Learning</li>
+                            <li>Visualisation (Matplotlib, Tableau)</li>
+                            <li>Deep Learning basiques</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-groupe">
+                        <h4>Métiers</h4>
+                        <ul>
+                            <li>Data Analyst</li>
+                            <li>Data Scientist</li>
+                            <li>ML Engineer</li>
+                            <li>Business Analyst</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="parcours-meta">
+                    <span class="duree">⏱ 7-9 mois</span>
+                    <span class="niveau"> Avancé</span>
+                </div>
+
+                <button class="btn btn-primaire" onclick="inscrisParcours('Data & IA')">
+                    S'inscrire maintenant
+                </button>
+            </div>
+
+            <!-- Parcours 4 : Cybersécurité -->
+            <div class="parcours-carte parcours-cyber">
+                <div class="parcours-header">
+                    <div class="parcours-icone"></div>
+                    <h2>Cybersécurité</h2>
+                </div>
+                <p class="parcours-description">
+                    Apprenez à sécuriser les systèmes, réseaux et données des organisations.
+                </p>
+
+                <div class="parcours-details">
+                    <div class="detail-groupe">
+                        <h4> Compétences</h4>
+                        <ul>
+                            <li>Sécurité réseau</li>
+                            <li>Tests d'intrusion</li>
+                            <li>Cryptographie</li>
+                            <li>Conformité RGPD</li>
+                            <li>Incident response</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-groupe">
+                        <h4>Débouchés</h4>
+                        <ul>
+                            <li>Security Analyst</li>
+                            <li>Pentester</li>
+                            <li>CISO</li>
+                            <li>Security Architect</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="parcours-meta">
+                    <span class="duree">⏱ 6-8 mois</span>
+                    <span class="niveau">Intermédiaire+</span>
+                </div>
+
+                <button class="btn btn-primaire" onclick="inscrisParcours('Cybersécurité')">
+                    S'inscrire maintenant
+                </button>
+            </div>
+
+            <!-- Parcours 5 : Entrepreneuriat Tech -->
+            <div class="parcours-carte parcours-startup">
+                <div class="parcours-header">
+                    <div class="parcours-icone"></div>
+                    <h2>Entrepreneuriat Tech</h2>
+                </div>
+                <p class="parcours-description">
+                    Pour ceux qui veulent lancer et développer leur startup numérique.
+                </p>
+
+                <div class="parcours-details">
+                    <div class="detail-groupe">
+                        <h4> Modules</h4>
+                        <ul>
+                            <li>Gestion de projet digital</li>
+                            <li>Business model canvas</li>
+                            <li>Marketing digital</li>
+                            <li>Levée de fonds</li>
+                            <li>Growth hacking</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-groupe">
+                        <h4> Pour qui</h4>
+                        <ul>
+                            <li>Fondateurs en herbe</li>
+                            <li>Developers entrepreneurs</li>
+                            <li>Innovateurs</li>
+                            <li>Intrapreneurs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="parcours-meta">
+                    <span class="duree">⏱ 3-4 mois</span>
+                    <span class="niveau"> Tous niveaux</span>
+                </div>
+
+                <button class="btn btn-primaire" onclick="inscrisParcours('Entrepreneuriat Tech')">
+                    S'inscrire maintenant
+                </button>
+            </div>
+
+            <!-- Parcours 6 : DevOps & Cloud -->
+            <div class="parcours-carte parcours-devops">
+                <div class="parcours-header">
+                    <div class="parcours-icone"></div>
+                    <h2>DevOps & Cloud</h2>
+                </div>
+                <p class="parcours-description">
+                    Maîtrisez le déploiement, l'automatisation et l'infrastructure cloud.
+                </p>
+
+                <div class="parcours-details">
+                    <div class="detail-groupe">
+                        <h4>Technologies</h4>
+                        <ul>
+                            <li>Docker & Kubernetes</li>
+                            <li>CI/CD (Jenkins, GitLab)</li>
+                            <li>AWS, Google Cloud, Azure</li>
+                            <li>Infrastructure as Code</li>
+                            <li>Monitoring & Logging</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-groupe">
+                        <h4> Carrières</h4>
+                        <ul>
+                            <li>DevOps Engineer</li>
+                            <li>Cloud Architect</li>
+                            <li>SRE</li>
+                            <li>Infrastructure Engineer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="parcours-meta">
+                    <span class="duree">⏱ 5-7 mois</span>
+                    <span class="niveau"> Avancé</span>
+                </div>
+
+                <button class="btn btn-primaire" onclick="inscrisParcours('DevOps & Cloud')">
+                    S'inscrire maintenant
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>OpenLearn</h4>
+                <p>Apprendre à coder. Construire l'Afrique numérique.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="parcours.html">Parcours</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Conditions générales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Mention légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📧 contact@openlearn.africa</p>
+                <p>💬 support@openlearn.africa</p>
+                <div class="reseaux-sociaux">
+                    <a href="#">f</a>
+                    <a href="#">in</a>
+                    <a href="#">𝕏</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OpenLearn. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/routing.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

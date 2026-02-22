@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - OpenLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">OpenLearn</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                <li><a href="formations.html" class="nav-link">Formations</a></li>
+                <li><a href="#contact" class="nav-link actif">Contact</a></li>
+            </ul>
+            <div class="nav-profil">
+                <button class="btn-connexion" onclick="afficherAuthentification()">Connexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page -->
+    <section class="page-header">
+        <div class="section-container">
+            <h1 class="titre-page">Contactez-nous</h1>
+            <p class="description-page">
+                Vous avez des questions ? Notre équipe est là pour vous aider.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contenu de contact -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="contact-grid">
+                <!-- Formulaire -->
+                <div class="contact-formulaire">
+                    <h2>Envoyez-nous un message</h2>
+
+                    <form class="formulaire" onsubmit="traiterContact(event)">
+                        <div class="groupe-champ">
+                            <label for="nom-contact">Nom complet</label>
+                            <input type="text" id="nom-contact" name="nom" placeholder="Votre nom" required>
+                        </div>
+
+                        <div class="groupe-champ">
+                            <label for="email-contact">Email</label>
+                            <input type="email" id="email-contact" name="email" placeholder="votre@email.com" required>
+                        </div>
+
+                        <div class="groupe-champ">
+                            <label for="telephone-contact">Téléphone (optionnel)</label>
+                            <input type="tel" id="telephone-contact" name="telephone" placeholder="+221 77 123 45 67">
+                        </div>
+
+                        <div class="groupe-champ">
+                            <label for="sujet-contact">Sujet</label>
+                            <select id="sujet-contact" name="sujet" required>
+                                <option value="">-- Sélectionnez un sujet --</option>
+                                <option value="inscription">Aide à l'inscription</option>
+                                <option value="technique">Problème technique</option>
+                                <option value="parcours">Questions sur les parcours</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="emploi">Offre d'emploi</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="groupe-champ">
+                            <label for="message-contact">Message</label>
+                            <textarea id="message-contact" name="message"
+                                placeholder="Décrivez votre message en détail..." rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primaire btn-large">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-infos">
+                    <h2>Nos coordonnées</h2>
+
+                    <div class="info-groupe">
+                        <h4> Email</h4>
+                        <p>
+                            <strong>Support général:</strong>
+                            <a href="mailto:support@openlearn.africa">support@openlearn.africa</a>
+                        </p>
+                        <p>
+                            <strong>Partenariats:</strong>
+                            <a href="mailto:contact@openlearn.africa">contact@openlearn.africa</a>
+                        </p>
+                    </div>
+
+                    <div class="info-groupe">
+                        <h4>Téléphone</h4>
+                        <p>
+                            <strong>Sénégal:</strong> +221 77 123 45 67<br>
+                            <strong>Côte d'Ivoire:</strong> +225 01 23 45 67<br>
+                            <strong>Cameroun:</strong> +237 65 123 45 67
+                        </p>
+                    </div>
+
+                    <div class="info-groupe">
+                        <h4>Horaires d'ouverture</h4>
+                        <p>
+                            Lundi - Vendredi: 09h00 - 18h00<br>
+                            Samedi: 10h00 - 16h00<br>
+                            Dimanche: Fermé
+                        </p>
+                    </div>
+
+                    <div class="info-groupe">
+                        <h4> Réseaux sociaux</h4>
+                        <div class="reseaux-sociaux-contact">
+                            <a href="#" class="lien-social"> Facebook</a>
+                            <a href="#" class="lien-social"> LinkedIn</a>
+                            <a href="#" class="lien-social">𝕏</a>
+                            <a href="#" class="lien-social"> YouTube</a>
+                        </div>
+                    </div>
+
+                    <div class="info-groupe">
+                        <h4> Localisation</h4>
+                        <p>
+                            OpenLearn<br>
+                            Centre Numérique Panafricain<br>
+                            Dakar, Sénégal
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="titre-section">Questions fréquemment posées</h2>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="basculerFAQ(this)">
+                            <h4>Combien coûtent les formations ?</h4>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-reponse">
+                            <p>
+                                Plusieurs formations sont gratuites, notamment celles de niveau débutant.
+                                Les formations intermédiaires et avancées sont payantes avec des tarifs très compétitifs
+                                (entre 9 999 et 24 999 FCFA). Des réductions de groupe et des bourses sont disponibles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="basculerFAQ(this)">
+                            <h4>Les formations sont-elles en ligne ?</h4>
+                            <span>+</span>

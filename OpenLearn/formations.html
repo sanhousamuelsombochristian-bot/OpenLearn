@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations - OpenLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">OpenLearn</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                <li><a href="#formations" class="nav-link actif">Formations</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-profil">
+                <button class="btn-connexion" onclick="afficherAuthentification()">Connexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page -->
+    <section class="page-header">
+        <div class="section-container">
+            <h1 class="titre-page">Explorez toutes nos formations</h1>
+            <p class="description-page">
+                Découvrez nos cours, exercices et projets pratiques conçus pour vous rendre employable.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="filtres-section">
+        <div class="section-container">
+            <div class="filtres-container">
+                <button class="filtre-btn actif" onclick="filtrerFormations('tous')">Tous les niveaux</button>
+                <button class="filtre-btn" onclick="filtrerFormations('debutant')"> Débutant</button>
+                <button class="filtre-btn" onclick="filtrerFormations('intermediaire')"> Intermédiaire</button>
+                <button class="filtre-btn" onclick="filtrerFormations('avance')"> Avancé</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations -->
+    <section id="formations" class="formations-section">
+        <div class="section-container">
+            <!-- Niveau Débutant -->
+            <div class="formations-groupe">
+                <h2 class="titre-groupe"> Formations Débutant</h2>
+                <div class="formations-grid">
+                    <div class="formation-carte" data-niveau="debutant">
+                        <div class="formation-icone"></div>
+                        <h3>Introduction à la Programmation</h3>
+                        <p>Apprenez les fondamentaux de la programmation et découvrez votre première langue : Python.
+                        </p>
+                        <div class="formation-stats">
+                            <span> 4 semaines</span>
+                            <span> 12 modules</span>
+                            <span> 20 exercices</span>
+                        </div>
+                        <div class="formation-prix">Gratuit</div>
+                        <button class="btn btn-secondaire"
+                            onclick="inscrireFormation('Introduction à la Programmation')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="debutant">
+                        <div class="formation-icone"></div>
+                        <h3>Bases du HTML & CSS</h3>
+                        <p>Maîtrisez la structure et le style des pages web. Créez votre première page responsive.</p>
+                        <div class="formation-stats">
+                            <span>3 semaines</span>
+                            <span> 8 modules</span>
+                            <span> 15 projets</span>
+                        </div>
+                        <div class="formation-prix">Gratuit</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('Bases du HTML & CSS')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="debutant">
+                        <div class="formation-icone"></div>
+                        <h3>Algorithmique & Logique</h3>
+                        <p>Comprenez comment les algorithmes fonctionnent et développez votre pensée logique.</p>
+                        <div class="formation-stats">
+                            <span> 5 semaines</span>
+                            <span> 15 modules</span>
+                            <span> 40 exercices</span>
+                        </div>
+                        <div class="formation-prix">Gratuit</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('Algorithmique & Logique')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="debutant">
+                        <div class="formation-icone">⌨</div>
+                        <h3>Git & Contrôle de Version</h3>
+                        <p>Apprenez Git, GitHub et collaborez efficacement sur des projets de code.</p>
+                        <div class="formation-stats">
+                            <span> 2 semaines</span>
+                            <span> 6 modules</span>
+                            <span> 10 exercices</span>
+                        </div>
+                        <div class="formation-prix">Gratuit</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('Git & Contrôle de Version')">
+                            S'inscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Niveau Intermédiaire -->
+            <div class="formations-groupe">
+                <h2 class="titre-groupe"> Formations Intermédiaire</h2>
+                <div class="formations-grid">
+                    <div class="formation-carte" data-niveau="intermediaire">
+                        <div class="formation-icone"></div>
+                        <h3>JavaScript Avancé</h3>
+                        <p>Progressez en JavaScript : async/await, closures, programmation fonctionnelle.</p>
+                        <div class="formation-stats">
+                            <span> semaines</span>
+                            <span> 18 modules</span>
+                            <span> 25 projets</span>
+                        </div>
+                        <div class="formation-prix">9 999 FCFA</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('JavaScript Avancé')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="intermediaire">
+                        <div class="formation-icone"></div>
+                        <h3>React.js Moderne</h3>
+                        <p>Développez des interfaces avec React : hooks, state management, routing.</p>
+                        <div class="formation-stats">
+                            <span>⏱ 7 semaines</span>
+                            <span>20 modules</span>
+                            <span> 30 projets</span>
+                        </div>
+                        <div class="formation-prix">14 999 FCFA</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('React.js Moderne')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="intermediaire">
+                        <div class="formation-icone"></div>
+                        <h3>Backend avec Node.js</h3>
+                        <p>Créez des serveurs robustes avec Node.js, Express et MongoDB.</p>
+                        <div class="formation-stats">
+                            <span> 8 semaines</span>
+                            <span> 22 modules</span>
+                            <span> 28 projets</span>
+                        </div>
+                        <div class="formation-prix">14 999 FCFA</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('Backend avec Node.js')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="intermediaire">
+                        <div class="formation-icone"></div>
+                        <h3>Bases de Données SQL</h3>
+                        <p>Maîtrisez les bases de données relationnelles avec MySQL et PostgreSQL.</p>
+                        <div class="formation-stats">
+                            <span> 6 semaines</span>
+                            <span> 16 modules</span>
+                            <span> 35 exercices</span>
+                        </div>
+                        <div class="formation-prix">9 999 FCFA</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('Bases de Données SQL')">
+                            S'inscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Niveau Avancé -->
+            <div class="formations-groupe">
+                <h2 class="titre-groupe"> Formations Avancé</h2>
+                <div class="formations-grid">
+                    <div class="formation-carte" data-niveau="avance">
+                        <div class="formation-icone"></div>
+                        <h3>Architecture Logicielle</h3>
+                        <p>Concevez des systèmes scalables : design patterns, microservices, SOLID.</p>
+                        <div class="formation-stats">
+                            <span> 8 semaines</span>
+                            <span> 24 modules</span>
+                            <span> 15 études de cas</span>
+                        </div>
+                        <div class="formation-prix">19 999 FCFA</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('Architecture Logicielle')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="avance">
+                        <div class="formation-icone"></div>
+                        <h3>Machine Learning avec Python</h3>
+                        <p>Construisez des modèles d'apprentissage automatique avec scikit-learn et TensorFlow.</p>
+                        <div class="formation-stats">
+                            <span> 10 semaines</span>
+                            <span> 28 modules</span>
+                            <span> 20 projets</span>
+                        </div>
+                        <div class="formation-prix">24 999 FCFA</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('Machine Learning avec Python')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="avance">
+                        <div class="formation-icone"></div>
+                        <h3>DevOps & Kubernetes</h3>
+                        <p>Maîtrisez Docker, Kubernetes et déployez des applications en production.</p>
+                        <div class="formation-stats">
+                            <span> 7 semaines</span>
+                            <span> 20 modules</span>
+                            <span> 18 labs pratiques</span>
+                        </div>
+                        <div class="formation-prix">19 999 FCFA</div>
+                        <button class="btn btn-secondaire" onclick="inscrireFormation('DevOps & Kubernetes')">
+                            S'inscrire
+                        </button>
+                    </div>
+
+                    <div class="formation-carte" data-niveau="avance">
+                        <div class="formation-icone"></div>
+                        <h3>Sécurité Offensive (Ethical Hacking)</h3>
+                        <p>Apprenez les techniques de test d'intrusion et sécurisez les systèmes.</p>
+                        <div class="formation-stats">
+                            <span> 9 semaines</span>
+                            <span> 26 modules</span>
+                            <span> 25 labs pratiques</span>
+                        </div>
+                        <div class="formation-prix">24 999 FCFA</div>
+                        <button class="btn btn-secondaire"
+                            onclick="inscrireFormation('Sécurité Offensive (Ethical Hacking)')">
+                            S'inscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section : Format des cours -->
+    <section class="format-section">
+        <div class="section-container">
+            <h2 class="titre-section">Chaque formation comprend</h2>
+
+            <div class="format-grid">
+                <div class="format-carte">
+                    <div class="format-icone"></div>
+                    <h3>Vidéos explicatives</h3>
+                    <p>Cours enregistrés par des experts, accessibles 24/7</p>
+                </div>
+                <div class="format-carte">
+                    <div class="format-icone"></div>
+                    <h3>Quiz interactifs</h3>
+                    <p>Testez votre compréhension à chaque module</p>
+                </div>
+                <div class="format-carte">
+                    <div class="format-icone"></div>
+                    <h3>Projets pratiques</h3>
+                    <p>Construisez un portfolio avec des projets réels</p>
+                </div>
+                <div class="format-carte">
+                    <div class="format-icone"></div>
+                    <h3>Sessions de mentorat</h3>
+                    <p>Échangez avec des mentors expérimentés</p>
+                </div>
+                <div class="format-carte">
+                    <div class="format-icone"></div>
+                    <h3>Communauté active</h3>
+                    <p>Collaborez avec d'autres apprenants</p>
+                </div>
+                <div class="format-carte">
+                    <div class="format-icone"></div>
+                    <h3>Certificat de réussite</h3>
+                    <p>Validez vos compétences officiellement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>OpenLearn</h4>
+                <p>Apprendre à coder. Construire l'Afrique numérique.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="parcours.html">Parcours</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Conditions générales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Mention légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p> contact@openlearn.africa</p>
+                <p> support@openlearn.africa</p>
+                <div class="reseaux-sociaux">
+                    <a href="#">f</a>
+                    <a href="#">in</a>
+                    <a href="#">𝕏</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OpenLearn. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/routing.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

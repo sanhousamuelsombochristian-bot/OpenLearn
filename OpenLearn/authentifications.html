@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <title>OpenLearn - Apprendre à coder. Construire l'Afrique numérique.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <a href="#"><span class="logo-text">OpenLearn</span></a>
+
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link actif">Accueil</a></li>
+                <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                <li><a href="formations.html" class="nav-link">Formations</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-bar">
+                <span class="nav-bar"></span>
+                <span class="nav-bar"></span>
+                <span class="nav-bar"></span>
+            </div>
+            <div class="nav-profil">
+                <button class="btn-connexion"><a href="#">Accueil </a></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteneur d'authentification -->
+    <section class="authentification-section">
+        <div class="authentification-container">
+            <!-- Formulaire de Connexion -->
+            <div class="formulaire-container formulaire-actif" id="formulaire-connexion">
+                <div class="formulaire-header">
+                    <h2>Connectez-vous</h2>
+                    <p>Accédez à votre espace d'apprentissage</p>
+                </div>
+
+                <form id="form-connexion" class="formulaire" onsubmit="traiterConnexion(event)">
+                    <div class="groupe-champ">
+                        <label for="email-connexion">Adresse Email</label>
+                        <input type="email" id="email-connexion" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label for="mdp-connexion">Mot de passe</label>
+                        <input type="password" id="mdp-connexion" name="motDePasse" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label><input type="checkbox" name="seuvenir">Se souvenir de moi</label>
+                    </div>
+
+                    <a href="#" class="lien-oubli">Mot de passe oublié ?</a>
+
+                    <button type="submit" class="btn btn-primaire btn-large">
+                        Se connecter
+                    </button>
+                </form>
+
+                <div class="separateur-ou">
+                    <span>OU</span>
+                </div>
+
+                <div class="connexions-sociales">
+                    <button class="btn-social btn-google" onclick="connexionSociale('Google')">
+                        G Continuer avec Google
+                    </button>
+                    <button class="btn-social btn-github" onclick="connexionSociale('GitHub')">
+                         Continuer avec GitHub
+                    </button>
+                </div>
+
+                <div class="basculer-formulaire">
+                    <p>Vous n'avez pas de compte ?
+                        <a href="#formulaire-header">Créer un compte</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Formulaire d'Inscription -->
+            <div class="formulaire-container" id="formulaire-inscription">
+                <div class="formulaire-header">
+                    <h2>Créez votre compte</h2>
+                    <p>Rejoignez la communauté OpenLearn</p>
+                </div>
+
+                <form id="form-inscription" class="formulaire" onsubmit="traiterInscription(event)">
+                    <div class="groupe-champ">
+                        <label for="nom-inscription">Nom complet</label>
+                        <input type="text" id="nom-inscription" name="nom" placeholder="Votre nom et prénom" required>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label for="email-inscription">Adresse Email</label>
+                        <input type="email" id="email-inscription" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label for="mdp-inscription">Mot de passe</label>
+                        <input type="password" id="mdp-inscription" name="motDePasse" placeholder="Min. 8 caractères"
+                            required>
+                        <small>Min. 8 caractères, 1 majuscule, 1 chiffre</small>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label for="mdp-confirmation">Confirmer le mot de passe</label>
+                        <input type="password" id="mdp-confirmation" name="confirmation"
+                            placeholder="Confirmer le mot de passe" required>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label for="pays-inscription">Pays</label>
+                        <select id="pays-inscription" name="pays" required>
+                            <option value="">-- Sélectionnez votre pays --</option>
+                            <option value="senegal">Sénégal</option>
+                            <option value="cote-ivoire">Côte d'Ivoire</option>
+                            <option value="cameroun">Cameroun</option>
+                            <option value="benin">Bénin</option>
+                            <option value="burkina">Burkina Faso</option>
+                            <option value="congo">Congo</option>
+                            <option value="gabon">Gabon</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="kenya">Kenya</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="rwandal">Rwanda</option>
+                            <option value="south-africa">Afrique du Sud</option>
+                            <option value="autre">Autre pays africain</option>
+                        </select>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label for="niveau-inscription">Votre niveau</label>
+                        <select id="niveau-inscription" name="niveau" required>
+                            <option value="">-- Sélectionnez votre niveau --</option>
+                            <option value="debutant"> Débutant (0-1 an d'expérience)</option>
+                            <option value="intermediaire"> Intermédiaire (1-3 ans)</option>
+                            <option value="avance"> Avancé (3+ ans)</option>
+                        </select>
+                    </div>
+
+                    <div class="groupe-champ">
+                        <label>
+                            <input type="checkbox" name="conditions" required>
+                            J'accepte les <a href="#">conditions générales</a> et la <a href="#">politique de
+                                confidentialité</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primaire btn-large">
+                        Créer mon compte
+                    </button>
+                </form>
+
+                <div class="basculer-formulaire">
+                    <p>Vous avez déjà un compte ?
+                        <a href="#" onclick="basculerFormulaire()">Se connecter</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Décoration latérale -->
+            <div class="authentification-decoration">
+                <div class="decoration-contenu">
+                    <h3> OpenLearn</h3>
+                    <p>Apprendre à coder.<br>Construire l'Afrique numérique.</p>
+
+                    <div class="avantages-deco">
+                        <div class="avantage-deco">
+                            <span class="icone"></span>
+                            <span class="texte">Cours en ligne</span>
+                        </div>
+                        <div class="avantage-deco">
+                            <span class="icone"></span>
+                            <span class="texte">Mobile friendly</span>
+                        </div>
+                        <div class="avantage-deco">
+                            <span class="icone"></span>
+                            <span class="texte">Mentors experts</span>
+                        </div>
+                        <div class="avantage-deco">
+                            <span class="icone"></span>
+                            <span class="texte">Certificats</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/routing.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
